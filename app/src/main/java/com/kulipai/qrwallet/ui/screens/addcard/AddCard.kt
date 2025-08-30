@@ -83,6 +83,12 @@ fun AddCardScreen(
                 .padding(innerPadding)
         ) {
             item {
+
+                Text(
+                    "添加到钱包",
+                    style = MaterialTheme.typography.headlineLargeEmphasized,
+                    modifier = Modifier.padding(24.dp, 0.dp)
+                )
                 CardItem(
                     title = "文本",
                     subtitle = "请输入文本",

@@ -76,16 +76,12 @@ dependencies {
 
     implementation(libs.androidx.material3.android)
 
-
     implementation(libs.qrose)
     implementation(libs.qrose.oned)
-
-    implementation(libs.okhttp)
 
     implementation(libs.androidx.material.icons.extended)
 
     implementation(libs.colorpicker)
-
 
     implementation(libs.scanner)
 

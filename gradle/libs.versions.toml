@@ -1,6 +1,6 @@
 [versions]
 accompanistPermissions = "0.37.3"
-agp = "8.12.1"
+agp = "8.12.2"
 colorpicker = "1.0.0"
 kotlin = "2.2.10"
 coreKtx = "1.17.0"
@@ -17,7 +17,6 @@ hiltNavigationCompose = "1.2.0"
 core = "2.2.0"
 compose-destinations = "2.2.0"
 material3Android = "1.5.0-alpha03"
-okhttp = "5.1.0"
 qrose = "1.0.1"
 scanner = "0.4.0"
 uiGraphics = "1.9.0"
@@ -45,14 +44,11 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-
-
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 core = { module = "io.github.raamcosta.compose-destinations:core", version.ref = "core" }
 compose-destinations-ksp = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "compose-destinations" }
-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 qrose = { module = "io.github.alexzhirkevich:qrose", version.ref = "qrose" }
 qrose-oned = { module = "io.github.alexzhirkevich:qrose-oned", version.ref = "qrose" }
 scanner = { module = "io.github.kalinjul.easyqrscan:scanner", version.ref = "scanner" }
