@@ -27,6 +27,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.kulipai.qrwallet.R
+import com.kulipai.qrwallet.data.cache.QRScanCache
 import com.kulipai.qrwallet.ui.components.JNUCard
 import com.kulipai.qrwallet.ui.components.TextCard
 import com.kulipai.qrwallet.ui.theme.AnimatedNavigation

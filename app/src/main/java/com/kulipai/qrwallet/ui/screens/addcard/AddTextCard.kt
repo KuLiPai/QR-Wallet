@@ -42,6 +42,7 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.kulipai.qrwallet.R
 import com.kulipai.qrwallet.data.CardInfo
+import com.kulipai.qrwallet.data.cache.QRScanCache
 import com.kulipai.qrwallet.ui.theme.AnimatedNavigation
 import com.kulipai.qrwallet.util.CardViewModel
 import com.kulipai.qrwallet.util.onColor
@@ -73,7 +74,7 @@ fun AddTextCardScreen(
     var showDialog by remember { mutableStateOf(false) }
 
     var input_name by remember { mutableStateOf("") }
-    var input_content by remember { mutableStateOf("") }
+    var input_content by remember { mutableStateOf(QRScanCache.content) }
     var input_description by remember { mutableStateOf("") }
     var input_color by remember { mutableStateOf("#") }
     val selectColor = parseHexColorOrNull(input_color) ?: Color.Transparent
@@ -267,8 +268,6 @@ fun AddTextCardScreen(
                     }
 
                     Spacer(Modifier.height(128.dp))
-
-
 
 
                 }

@@ -33,12 +33,13 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.kulipai.qrwallet.R
+import com.kulipai.qrwallet.data.cache.QRScanCache
 import com.kulipai.qrwallet.ui.theme.AnimatedNavigation
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import com.ramcosta.composedestinations.generated.destinations.AddJNUCardScreenDestination
 import com.ramcosta.composedestinations.generated.destinations.AddTextCardScreenDestination
-import com.ramcosta.composedestinations.generated.destinations.TestScreenDestination
+import com.ramcosta.composedestinations.generated.destinations.CopyCardScreenDestination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.ramcosta.composedestinations.spec.DirectionDestinationSpec
 
@@ -48,6 +49,8 @@ import com.ramcosta.composedestinations.spec.DirectionDestinationSpec
 fun AddCardScreen(
     navigator: DestinationsNavigator,
 ) {
+
+    QRScanCache.content = ""
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -110,7 +113,7 @@ fun AddCardScreen(
                     subtitle = "just copy,you know?",
                     icon = painterResource(R.drawable.qr_code_scanner_24px),
                     navigator = navigator,
-                    goto = TestScreenDestination
+                    goto = CopyCardScreenDestination
                 )
             }
         }

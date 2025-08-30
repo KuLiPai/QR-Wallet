@@ -85,11 +85,14 @@ dependencies {
 
     implementation(libs.su.core)
     implementation(libs.shizuku.api)
-//    implementation(libs.libsu)
     implementation(libs.provider) // ShizukuProvider
     implementation(libs.androidx.material.icons.extended)
 
-//    implementation(libs.gson)
     implementation(libs.colorpicker)
+
+
+    implementation(libs.scanner)
+
+    implementation(libs.accompanist.permissions)
 
 }
