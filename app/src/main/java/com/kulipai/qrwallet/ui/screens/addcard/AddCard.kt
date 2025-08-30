@@ -37,7 +37,6 @@ import com.kulipai.qrwallet.data.cache.QRScanCache
 import com.kulipai.qrwallet.ui.theme.AnimatedNavigation
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
-import com.ramcosta.composedestinations.generated.destinations.AddJNUCardScreenDestination
 import com.ramcosta.composedestinations.generated.destinations.AddTextCardScreenDestination
 import com.ramcosta.composedestinations.generated.destinations.CopyCardScreenDestination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
@@ -84,21 +83,6 @@ fun AddCardScreen(
                 .padding(innerPadding)
         ) {
             item {
-                Text(
-                    "添加到钱包",
-                    style = MaterialTheme.typography.headlineLargeEmphasized,
-                    modifier = Modifier.padding(24.dp, 0.dp)
-                )
-                Spacer(Modifier.height(36.dp))
-                CardItem(
-                    title = "校园码",
-                    subtitle = "江南大学门禁二维码",
-                    icon = painterResource(R.drawable.jnu),
-                    navigator = navigator,
-                    goto = AddJNUCardScreenDestination
-                )
-//            Spacer(Modifier.height(24.dp))
-
                 CardItem(
                     title = "文本",
                     subtitle = "请输入文本",

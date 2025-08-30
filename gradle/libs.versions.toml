@@ -24,9 +24,6 @@ uiGraphics = "1.9.0"
 materialIconsExtended = "1.7.8"
 material3 = "1.5.0-alpha03"
 foundation = "1.9.0"
-su-core = "6.0.0"
-apiVersion = "13.1.5"
-provider = "13.1.5"
 firebaseCrashlyticsBuildtools = "3.0.6"
 
 
@@ -62,9 +59,6 @@ scanner = { module = "io.github.kalinjul.easyqrscan:scanner", version.ref = "sca
 ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics", version.ref = "uiGraphics" }
 material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
 androidx-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
-su-core = { module = "com.github.topjohnwu.libsu:core", version.ref = "su-core" }
-shizuku-api = { module = "dev.rikka.shizuku:api", version.ref = "apiVersion" }
-provider = { module = "dev.rikka.shizuku:provider", version.ref = "provider" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 

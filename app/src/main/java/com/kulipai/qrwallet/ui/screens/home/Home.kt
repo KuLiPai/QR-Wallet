@@ -27,12 +27,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.kulipai.qrwallet.R
-import com.kulipai.qrwallet.data.cache.QRScanCache
-import com.kulipai.qrwallet.ui.components.JNUCard
 import com.kulipai.qrwallet.ui.components.TextCard
 import com.kulipai.qrwallet.ui.theme.AnimatedNavigation
 import com.kulipai.qrwallet.util.CardViewModel
-import com.kulipai.qrwallet.util.Prefs
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import com.ramcosta.composedestinations.generated.destinations.AddCardScreenDestination
@@ -96,13 +93,6 @@ fun HomeScreen(
             LazyColumn(
                 Modifier.fillMaxSize()
             ) {
-                item {
-                    if (Prefs.getString("jnu_param_AUTHTGC", "") != "") {
-                        JNUCard(navigator = navigator)
-                    }
-
-
-                }
 
                 items(cards) { card ->
                     TextCard(

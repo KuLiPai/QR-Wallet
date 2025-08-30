@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-    <!-- 只对白名单域名放行 HTTP -->
-    <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">fanxiaotong.jiangnan.edu.cn</domain>
-    </domain-config>
-</network-security-config>

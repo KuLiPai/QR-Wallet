@@ -40,7 +40,6 @@ android {
     buildFeatures {
         buildConfig = true
         compose = true
-        aidl = true
     }
 }
 
@@ -83,9 +82,6 @@ dependencies {
 
     implementation(libs.okhttp)
 
-    implementation(libs.su.core)
-    implementation(libs.shizuku.api)
-    implementation(libs.provider) // ShizukuProvider
     implementation(libs.androidx.material.icons.extended)
 
     implementation(libs.colorpicker)

@@ -38,80 +38,6 @@ class MainActivity : ComponentActivity() {
             QRWalletTheme {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-//                    contentWindowInsets = WindowInsets(bottom = 0),
-//                    floatingActionButton = {
-//                        val showFAB = currentRoute in listOf(
-//                            HomeScreenDestination.route,
-//                        )
-//                        if (showFAB) {
-//                            FloatingActionButton(
-//                                onClick = {
-////                                navController.navigate(TestScreenDestination.route)
-//                                    navController.navigate(AddCardScreenDestination.route)
-//                                },
-//                                modifier = Modifier
-//                                    .padding(0.dp, 16.dp)
-//                            ) {
-//                                Row(
-//                                    modifier = Modifier.padding(16.dp),
-//                                    verticalAlignment = Alignment.CenterVertically
-//                                ) {
-//                                    Icon(
-//                                        painter = painterResource(R.drawable.add_24px),
-//                                        contentDescription = null,
-//                                        modifier = Modifier.size(24.dp)
-//                                    )
-//                                    Spacer(modifier = Modifier.width(8.dp))
-//                                    Text("Add Card")
-//                                }
-//                            }
-//                        }
-//                    },
-//                    floatingActionButtonPosition = FabPosition.End,
-//
-//                    topBar = {
-//                        val showTopBar = currentRoute in listOf(
-//                            HomeScreenDestination.route,
-//                        )
-//                        if (showTopBar) {
-//                            TopAppBar(
-//                                title = {
-//                                    Text("Wallet")
-//                                },
-//                            )
-//                        }
-//                        if (currentRoute in listOf(
-//                                AddCardScreenDestination.route,
-//                            )
-//                        ) {
-//                            TopAppBar(
-//                                navigationIcon = {
-//                                    IconButton(
-//                                        {
-//                                            navController.navigateUp()
-//                                        }
-//                                    ) {
-//                                        Icon(
-//                                            painter = painterResource(R.drawable.close_24px),
-//                                            contentDescription = null
-//                                        )
-//                                    }
-//                                },
-//                                title = { },
-//
-//                                )
-//                        }
-//
-//                        if (currentRoute in listOf(
-//                                TextQRScreenDestination.route,
-//                                JNUScreenDestination.route
-//                            )
-//                        ) {
-//                            TopAppBar(
-//                                title = { },
-//                            )
-//                        }
-//                    }
                 ) { innerPadding ->
 
                     Log.d("111", innerPadding.toString())
@@ -121,16 +47,10 @@ class MainActivity : ComponentActivity() {
 
                         navController = navController,
                         modifier = Modifier.fillMaxSize(),
-//                        modifier = Modifier.padding(innerPadding)
-//                        modifier = if (currentRoute in listOf(
-//                                AddCardScreenDestination.route,
-//                            )
-//                        ) Modifier else Modifier.padding(innerPadding)
                     )
 
                 }
             }
-//        }
         }
     }
 }
