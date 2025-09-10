@@ -1,5 +1,6 @@
 package com.kulipai.qrwallet.ui.components
 
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -18,7 +19,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -37,9 +40,12 @@ fun TextCard(
     title: String,
     description: String,
     content: String,
-    color: String
+    color: String,
+    onLongClick: () -> Unit,
 ) {
 
+
+    val context = LocalContext.current
 
     val cardColor = try {
         Color(color.toColorInt())
@@ -48,10 +54,11 @@ fun TextCard(
     }
 
     Card(
-        onClick = {
-            TextCache.text = content
-            navigator.navigate(TextQRScreenDestination)
-        },
+
+//        onClick = {
+//            TextCache.text = content
+//            navigator.navigate(TextQRScreenDestination)
+//        },
         colors = CardDefaults.cardColors(
             containerColor = cardColor,
             contentColor = cardColor.onColor()
@@ -61,6 +68,14 @@ fun TextCard(
             .fillMaxWidth()
             .padding(16.dp, 8.dp)
             .aspectRatio(1.8f)
+            .clip(MaterialTheme.shapes.extraLarge)
+            .combinedClickable(
+                onClick = {
+                    TextCache.text = content
+                    navigator.navigate(TextQRScreenDestination)
+                },
+                onLongClick = onLongClick
+            )
     ) {
         Column(
             modifier = Modifier
@@ -68,7 +83,7 @@ fun TextCard(
                 .fillMaxHeight()
 
         ) {
-            Row() {
+            Row {
                 Text(
                     title,
                     fontSize = 19.sp
