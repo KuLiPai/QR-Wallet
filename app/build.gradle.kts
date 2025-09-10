@@ -19,6 +19,31 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    
+    flavorDimensions += "abi"
+
+    productFlavors {
+        create("armv7") {
+            dimension = "abi"
+            ndk {
+                abiFilters.add("armeabi-v7a")
+            }
+        }
+        create("arm64") {
+            dimension = "abi"
+
+            ndk {
+                abiFilters.add("arm64-v8a")
+            }
+        }
+        create("x86") {
+            dimension = "abi"
+
+            ndk {
+                abiFilters.add("x86")
+            }
+        }
+    }
 
     buildTypes {
         release {
@@ -57,7 +82,6 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.androidx.foundation)
     implementation(libs.firebase.crashlytics.buildtools)
-    implementation(libs.androidx.compose.material3)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
