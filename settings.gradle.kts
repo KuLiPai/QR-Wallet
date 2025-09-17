@@ -24,4 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "QR Wallet"
 include(":app")
- 
+include(":colorPicker")

@@ -106,8 +106,8 @@ dependencies {
 
     implementation(libs.androidx.material.icons.extended)
 
-    implementation(libs.colorpicker)
-
+//    implementation(libs.colorpicker)
+    implementation(project(":colorPicker"))
     implementation(libs.scanner)
 
     implementation(libs.accompanist.permissions)
